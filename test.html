@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <!-- 其他 head 内容保持不变 -->
+    <style>
+        /* 其他样式保持不变 */
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f7d6ff;
+            font-family: "Microsoft YaHei", "PingFang SC", "WenQuanYi Micro Hei", sans-serif;
+            padding: 2rem;
+        }
+
+        .card {
+            margin-bottom: 4rem;
+            opacity: 0;
+            transform: scale(.8) translateY(20vh);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            border-radius: 10px;
+            box-shadow: 0px 8px 20px #00000022;
+            color: #333;
+            background-image: linear-gradient(to bottom right,
+                    rgba(145, 222, 254, 0.8),
+                    rgba(153, 192, 249, 0.8),
+                    rgba(189, 182, 236, 0.8),
+                    rgba(215, 179, 227, 0.8),
+                    rgba(239, 179, 213, 0.8),
+                    rgba(249, 188, 204, 0.8));
+            padding: 2rem;
+            /* 其他样式保持不变 */
+        }
+
+        .card h1,
+        .card h2,
+        .card h3 {
+            margin-bottom: 1rem;
+            /* 添加模糊陰影 */
+            text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .card p {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+            /* 添加模糊陰影 */
+            text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 新增的樣式，為每個標題設定不同的顏色 */
+        h1 {
+            color: #294b7e;
+            /* 深藍色 */
+        }
+
+        h2 {
+            color: rgba(0, 68, 255, 0.66);
+            /* 半透明藍色 */
+        }
+
+        h3 {
+            color: rgba(81, 81, 81, 0.76);
+            /* 半透明灰色 */
+        }
+
+        /* 調整卡片內文字的最大寬度，讓內容不會太寬 */
+        .card>* {
+            max-width: 100%;
+            word-wrap: break-word;
+        }
+
+        .card:last-child {
+            margin-bottom: 20vh;
+            /* 增加底部空白，确保最后一个卡片能完全滚动进入视口 */
+        }
+
+        .card.show {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+
+        /* 其他样式保持不变 */
+    </style>
+</head>
+
+<body>
+    <div class="cards">
+        <!-- 卡片内容保持不变 -->
+        <!-- 卡片 1：标题 -->
+        <div class="card">
+            <h1>約稿業務詳細內容 •᎔•ᐝ</h1>
+        </div>
+        <!-- 卡片 2：業務說明 -->
+        <div class="card">
+            <h2>✦ 業務說明 oᴗoᐝ</h2>
+            <h3>摸魚業務</h3>
+            <p>• 需求：需要詳細的人物/OC設定，不接受純文字。</p>
+            <p>• 價格範圍：100～300元（根據精緻度而定） ◕‿◕ᐝ</p>
+            <p>• 備註：草稿 &gt; 成稿（默認情況下一鍵出稿，除非設定錯誤。草稿僅供單主「許願」添加或修改，但不一定進行修改） ⦁⩊⦁ᐝ</p>
+        </div>
+        <!-- 卡片 3：全身繪製 -->
+        <div class="card">
+            <h3>全身繪製</h3>
+            <p>• 需求：動作可指定（需要提供例圖）；若全交由自由發揮，需提供人物/OC性格。</p>
+            <p>• 價格範圍：50～150元（根據精緻度而定） •͈⌔•͈ᐝ</p>
+            <p>• ･-･ᐝ</p>
+        </div>
+        <!-- 卡片 4：頭像繪製 -->
+        <div class="card">
+            <h3>頭像繪製</h3>
+            <p>• 說明：會繪製到衣服部分，因此需要提供衣服設定，最多繪製到袖子。</p>
+            <p>• ⦁֊⦁ᐝ</p>
+        </div>
+        <!-- 卡片 5：製作價格表 -->
+        <div class="card">
+            <h3>製作價格表</h3>
+            <p>• 說明：根據指定用途和風格複雜度報價，提供詳細報價單。</p>
+            <p>• 價格範圍：100～300元（與內容複雜度成正比） ･ｪ･ᐝ</p>
+            <p>• 特點：確認稿件後進入成稿階段（可修改一次佈局） •︡ ‿‎ •︠ᐝ</p>
+            <p>• 提供風格：可愛/典雅/ins風，尺寸自訂或默認長方/正方，為方便不熟悉 px 單位的單主設置。</p>
+        </div>
+        <!-- 卡片 6：注意事項 -->
+        <div class="card">
+            <h2>✦ 注意事項 ˙Ⱉ˙ᐝ</h2>
+            <p>• 因為自身水平不佳，⚠️ 暫時只接受繪製女孩子和萌物。 ◍×◍ᐝ</p>
+            <p>• 所有稿件（除買斷）默認展示，不展示需支付額外費用。 •͈⌔•͈ᐝ</p>
+        </div>
+        <!-- 卡片 7：特別提示 -->
+        <div class="card">
+            <h2>✦ 特別提示 ⦁⩊⦁ᐝ</h2>
+            <p>• 草稿出稿時間依精緻度不同，約1-3周內交付。 •ᴥ•ᐝ</p>
+            <p>• 一週內可免費修改五次，超過後需支付額外費用。 ⦁𖥦⦁ᐝ</p>
+            <p>• 未滿18歲、完美主義者，請謹慎約稿。 •︡ᯅ•︠ᐝ</p>
+            <p>• 若有任何需求或更改建議，請提前溝通以便順利合作。</p>
+        </div>
+    </div>
+
+    <!-- 添加脚本 -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cards = document.querySelectorAll('.card');
+
+            const observerOptions = {
+                root: null,
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            cards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+
+</html>
