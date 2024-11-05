@@ -13,29 +13,30 @@
         }
 
         body {
-            min-block-size: 100%;
-            display: grid;
-            place-content: center;
-            /* 設置上下內邊距為 30% 視口高度 */
-            padding-block: 30dvh;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background: #f7d6ff;
             font-family: "Microsoft YaHei", "PingFang SC", "WenQuanYi Micro Hei", sans-serif;
+            padding: 2rem;
         }
 
         @keyframes slide-fade-in {
             from {
                 opacity: 0;
                 box-shadow: none;
-                transform: scale(.8) translateY(15vh);
+                transform: scale(.8) translateY(20vh);
             }
         }
 
         .cards {
-            display: grid;
+            display: flex;
+            flex-direction: column;
             gap: 2rem;
-            /* 自動排列 */
-            grid-auto-flow: dense;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            width: 100%;
+            max-width: 800px;
+            /* 限制內容寬度，讓閱讀體驗更佳 */
         }
 
         .card {
@@ -46,7 +47,7 @@
             animation-range: contain 0% contain 50%;
             border-radius: 10px;
             box-shadow: 0px 8px 20px #00000022;
-            color: #fff;
+            color: #333;
             background-image: linear-gradient(to bottom right,
                     #91defecc,
                     #99c0f9cc,
@@ -54,19 +55,19 @@
                     #d7b3e3cc,
                     #efb3d5cc,
                     #f9bccccc);
-            padding: 1rem;
+            padding: 2rem;
         }
 
         .card h1,
         .card h2,
         .card h3 {
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
             /* 添加模糊陰影 */
             text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
         }
 
         .card p {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
             line-height: 1.6;
             /* 添加模糊陰影 */
             text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
@@ -79,13 +80,24 @@
         }
 
         h2 {
-            color: #0044ffa9;
-            /* 鮮豔的藍色 */
+            color: rgba(0, 68, 255, 0.66);
+            /* 半透明藍色 */
         }
 
         h3 {
-            color: #515151c2;
-            /* 黑色 */
+            color: rgba(81, 81, 81, 0.76);
+            /* 半透明灰色 */
+        }
+
+        /* 調整卡片內文字的最大寬度，讓內容不會太寬 */
+        .card>* {
+            max-width: 100%;
+            word-wrap: break-word;
+        }
+
+        .card:last-child {
+            margin-bottom: 20vh;
+            /* 增加底部空白，确保最后一个卡片能完全滚动进入视口 */
         }
     </style>
 </head>
@@ -136,7 +148,7 @@
             <h2>✦ 特別提示 ⦁⩊⦁ᐝ</h2>
             <p>• 草稿出稿時間依精緻度不同，約1-3周內交付。 •ᴥ•ᐝ</p>
             <p>• 一週內可免費修改五次，超過後需支付額外費用。 ⦁𖥦⦁ᐝ</p>
-            <p>• 未滿18歲的完美主義者，請謹慎約稿。 •︡ᯅ•︠ᐝ</p>
+            <p>• 未滿18歲、完美主義者，請謹慎約稿。 •︡ᯅ•︠ᐝ</p>
             <p>• 若有任何需求或更改建議，請提前溝通以便順利合作。</p>
         </div>
     </div>
