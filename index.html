@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>山羊の前端小窝</title>
+    <title>約稿業務詳細內容 •᎔•ᐝ</title>
     <style>
         * {
             box-sizing: border-box;
@@ -12,14 +12,14 @@
             margin: 0;
         }
 
-
         body {
             min-block-size: 100%;
             display: grid;
             place-content: center;
-            /* 设置上下内边距为 30% 视口高度 */
+            /* 設置上下內邊距為 30% 視口高度 */
             padding-block: 30dvh;
             background: #f7d6ff;
+            font-family: "Microsoft YaHei", "PingFang SC", "WenQuanYi Micro Hei", sans-serif;
         }
 
         @keyframes slide-fade-in {
@@ -33,90 +33,112 @@
         .cards {
             display: grid;
             gap: 2rem;
-            /* 自动排列 */
+            /* 自動排列 */
             grid-auto-flow: dense;
-            grid-template-columns: repeat(4, 30ch);
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         }
 
         .card {
             animation: slide-fade-in both;
-            /* 使用浏览器的视图时间线,允许动画根据视口的变化进行同步 */
+            /* 使用瀏覽器的視圖時間線，允許動畫根據視口的變化進行同步 */
             animation-timeline: view();
-            /* 定义动画时间范围 */
+            /* 定義動畫時間範圍 */
             animation-range: contain 0% contain 50%;
             border-radius: 10px;
-            line-height: 6;
             box-shadow: 0px 8px 20px #00000022;
-            font-size: 32px;
-            letter-spacing: 5px;
             color: #fff;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
             background-image: linear-gradient(to bottom right,
-                    #91defe,
-                    #99c0f9,
-                    #bdb6ec,
-                    #d7b3e3,
-                    #efb3d5,
-                    #f9bccc);
-            display: flex;
-            justify-content: center;
-            align-items: center;
+                    #91defecc,
+                    #99c0f9cc,
+                    #bdb6eccc,
+                    #d7b3e3cc,
+                    #efb3d5cc,
+                    #f9bccccc);
+            padding: 1rem;
         }
 
-        .card img {
-            width: 100%;
-            height: 100%;
+        .card h1,
+        .card h2,
+        .card h3 {
+            margin-bottom: 0.5rem;
+            /* 添加模糊陰影 */
+            text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
         }
 
-        .card:nth-of-type(4n) {
-            grid-column: span 2;
+        .card p {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+            /* 添加模糊陰影 */
+            text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
         }
 
-        .card:nth-of-type(5n) {
-            grid-column: span 2;
+        /* 新增的樣式，為每個標題設定不同的顏色 */
+        h1 {
+            color: #294b7e;
+            /* 深藍色 */
         }
 
-        .card:nth-of-type(7n) {
-            grid-row: span 2;
+        h2 {
+            color: #0044ffa9;
+            /* 鮮豔的藍色 */
+        }
+
+        h3 {
+            color: #515151c2;
+            /* 黑色 */
         }
     </style>
 </head>
 
 <body>
     <div class="cards">
-        <div class="card">TEXT</div>
-        <div class="card">TEXT</div>
-        <div class="card">TEXT</div>
-        <div class="card">TEXT</div>
-        <div class="card"> <img src="./01.png"></div>
-        <div class="card">TEXT</div>
-        <div class="card">TEXT</div>
-        <div class="card">TEXT</div>
-        <div class="card"> <img src="./02.png"></div>
-        <div class="card"> <img src="./03.png"></div>
-        <div class="card">TEXT</div>
-        <div class="card">TEXT</div>
-        <div class="card">TEXT</div>
-        <div class="card">TEXT</div>
-        <div class="card"> <img src="./04.png"></div>
-        <div class="card">TEXT</div>
-        <div class="card">TEXT</div>
-        <div class="card">TEXT</div>
-        <div class="card">TEXT</div>
-        <div class="card"> <img src="./05.png"></div>
-        <div class="card">TEXT</div>
-        <div class="card">TEXT</div>
-        <div class="card">TEXT</div>
-        <div class="card">TEXT</div>
-        <div class="card"> <img src="./06.png"></div>
-        <div class="card">TEXT</div>
-        <div class="card">TEXT</div>
-        <div class="card"> <img src="./07.png"></div>
-        <div class="card">TEXT</div>
-        <div class="card">TEXT</div>
-        <div class="card">TEXT</div>
+        <!-- 卡片 1：標題 -->
+        <div class="card">
+            <h1>約稿業務詳細內容 •᎔•ᐝ</h1>
+        </div>
+        <!-- 卡片 2：業務說明 -->
+        <div class="card">
+            <h2>✦ 業務說明 oᴗoᐝ</h2>
+            <h3>摸魚業務</h3>
+            <p>• 需求：需要詳細的人物/OC設定，不接受純文字。</p>
+            <p>• 價格範圍：100～300元（根據精緻度而定） ◕‿◕ᐝ</p>
+            <p>• 備註：草稿 &gt; 成稿（默認情況下一鍵出稿，除非設定錯誤。草稿僅供單主「許願」添加或修改，但不一定進行修改） ⦁⩊⦁ᐝ</p>
+        </div>
+        <!-- 卡片 3：全身繪製 -->
+        <div class="card">
+            <h3>全身繪製</h3>
+            <p>• 需求：動作可指定（需要提供例圖）；若全交由自由發揮，需提供人物/OC性格。</p>
+            <p>• 價格範圍：50～150元（根據精緻度而定） •͈⌔•͈ᐝ</p>
+            <p>• ･-･ᐝ</p>
+        </div>
+        <!-- 卡片 4：頭像繪製 -->
+        <div class="card">
+            <h3>頭像繪製</h3>
+            <p>• 說明：會繪製到衣服部分，因此需要提供衣服設定，最多繪製到袖子。</p>
+            <p>• ⦁֊⦁ᐝ</p>
+        </div>
+        <!-- 卡片 5：製作價格表 -->
+        <div class="card">
+            <h3>製作價格表</h3>
+            <p>• 說明：根據指定用途和風格複雜度報價，提供詳細報價單。</p>
+            <p>• 價格範圍：100～300元（與內容複雜度成正比） ･ｪ･ᐝ</p>
+            <p>• 特點：確認稿件後進入成稿階段（可修改一次佈局） •︡ ‿‎ •︠ᐝ</p>
+            <p>• 提供風格：可愛/典雅/ins風，尺寸自訂或默認長方/正方，為方便不熟悉 px 單位的單主設置。</p>
+        </div>
+        <!-- 卡片 6：注意事項 -->
+        <div class="card">
+            <h2>✦ 注意事項 ˙Ⱉ˙ᐝ</h2>
+            <p>• 因為自身水平不佳，⚠️ 暫時只接受繪製女孩子和萌物。 ◍×◍ᐝ</p>
+            <p>• 所有稿件（除買斷）默認展示，不展示需支付額外費用。 •͈⌔•͈ᐝ</p>
+        </div>
+        <!-- 卡片 7：特別提示 -->
+        <div class="card">
+            <h2>✦ 特別提示 ⦁⩊⦁ᐝ</h2>
+            <p>• 草稿出稿時間依精緻度不同，約1-3周內交付。 •ᴥ•ᐝ</p>
+            <p>• 一週內可免費修改五次，超過後需支付額外費用。 ⦁𖥦⦁ᐝ</p>
+            <p>• 未滿18歲的完美主義者，請謹慎約稿。 •︡ᯅ•︠ᐝ</p>
+            <p>• 若有任何需求或更改建議，請提前溝通以便順利合作。</p>
+        </div>
     </div>
 </body>
 
